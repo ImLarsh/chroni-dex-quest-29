@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { 
   ArrowLeft, ChevronLeft, ChevronRight, Search, 
-  Gamepad, MapPin, Users, Zap, Calendar
+  MapPin, Users, Zap
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Pokeball } from "@/components/PokemonIcons";
+import { Pokeball, PokemonCalendar, PokemonBattle } from "@/components/PokemonIcons";
 import { cn } from "@/lib/utils";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
@@ -227,7 +227,7 @@ export default function GenerationTimeline() {
           </Button>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Calendar className="h-6 w-6 text-primary-foreground" />
+              <PokemonCalendar className="h-6 w-6" />
             </div>
             <div>
               <h1 className="text-3xl font-bold">Generation Timeline</h1>
@@ -329,7 +329,7 @@ export default function GenerationTimeline() {
               {/* Games & Features */}
               <Card className="p-6">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
-                  <Gamepad className="h-5 w-5" />
+                  <PokemonBattle className="h-5 w-5" />
                   Games & Features
                 </h3>
                 

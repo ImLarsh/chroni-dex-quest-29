@@ -33,6 +33,22 @@ export const Pikachu = ({ className }: { className?: string }) => (
   <img src="/src/assets/pokemon-icons/pikachu.png" alt="Pikachu" className={className} />
 );
 
+export const PokemonCalendar = ({ className }: { className?: string }) => (
+  <img src="/src/assets/pokemon-icons/calendar.png" alt="Calendar" className={className} />
+);
+
+export const PokemonMusic = ({ className }: { className?: string }) => (
+  <img src="/src/assets/pokemon-icons/music-note.png" alt="Music" className={className} />
+);
+
+export const PokemonShuffle = ({ className }: { className?: string }) => (
+  <img src="/src/assets/pokemon-icons/shuffle.png" alt="Shuffle" className={className} />
+);
+
+export const PokemonBattle = ({ className }: { className?: string }) => (
+  <img src="/src/assets/pokemon-icons/battle.png" alt="Battle" className={className} />
+);
+
 // Icon mapping for stats
 export const getPokemonStatIcon = (statName: string) => {
   switch (statName) {

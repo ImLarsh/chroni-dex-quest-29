@@ -6,10 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
   ArrowLeft, Plus, Trash2, Star, Search, Trophy, 
-  Calendar, MapPin, Clock, Target, RotateCcw, Shuffle
+  Calendar, MapPin, Clock, Target, RotateCcw
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Pokeball } from "@/components/PokemonIcons";
+import { Pokeball, PokemonShuffle } from "@/components/PokemonIcons";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import axios from "axios";
@@ -249,7 +249,7 @@ export default function ShinyTracker() {
           </Button>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Shuffle className="h-6 w-6 text-primary-foreground" />
+              <PokemonShuffle className="h-6 w-6" />
             </div>
             <div>
               <h1 className="text-3xl font-bold">Shiny Tracker</h1>

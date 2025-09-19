@@ -6,10 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
   ArrowLeft, Play, Pause, Volume2, VolumeX, Search, 
-  SkipBack, SkipForward, Shuffle, RotateCcw, Music
+  SkipBack, SkipForward, RotateCcw
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Pokeball } from "@/components/PokemonIcons";
+import { Pokeball, PokemonMusic, PokemonShuffle } from "@/components/PokemonIcons";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import axios from "axios";
@@ -201,7 +201,7 @@ export default function PokemonCries() {
           </Button>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Music className="h-6 w-6 text-primary-foreground" />
+              <PokemonMusic className="h-6 w-6" />
             </div>
             <div>
               <h1 className="text-3xl font-bold">Pokémon Cries</h1>
@@ -228,7 +228,7 @@ export default function PokemonCries() {
                 </div>
                 
                 <Button onClick={playRandomPokemon} variant="outline" className="w-full">
-                  <Shuffle className="h-4 w-4 mr-2" />
+                  <PokemonShuffle className="h-4 w-4 mr-2" />
                   Random Pokémon
                 </Button>
                 
@@ -269,7 +269,7 @@ export default function PokemonCries() {
                   className="w-full justify-start"
                   onClick={() => setIsShuffleMode(!isShuffleMode)}
                 >
-                  <Shuffle className={cn("h-4 w-4 mr-2", isShuffleMode && "text-primary")} />
+                  <PokemonShuffle className={cn("h-4 w-4 mr-2", isShuffleMode && "opacity-100")} />
                   Shuffle Mode {isShuffleMode ? "On" : "Off"}
                 </Button>
                 
@@ -279,7 +279,7 @@ export default function PokemonCries() {
                     className="w-full justify-start"
                     onClick={toggleFavorite}
                   >
-                    <Music className={cn(
+                    <PokemonMusic className={cn(
                       "h-4 w-4 mr-2", 
                       favorites.includes(currentPokemon.id) && "text-red-500"
                     )} />
@@ -411,13 +411,13 @@ export default function PokemonCries() {
                 </div>
               ) : (
                 <div className="text-center py-16">
-                  <Music className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
+                  <PokemonMusic className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                   <h3 className="text-xl font-semibold mb-2">No Pokémon Selected</h3>
                   <p className="text-muted-foreground mb-6">
                     Search for a Pokémon or select a random one to start listening to cries!
                   </p>
                   <Button onClick={playRandomPokemon}>
-                    <Shuffle className="h-4 w-4 mr-2" />
+                    <PokemonShuffle className="h-4 w-4 mr-2" />
                     Play Random Cry
                   </Button>
                 </div>

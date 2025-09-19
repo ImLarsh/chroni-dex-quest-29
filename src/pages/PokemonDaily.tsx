@@ -3,9 +3,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, Star, Clock, Gift, Heart, Zap, Shield, Sword, Calendar } from "lucide-react";
+import { ArrowLeft, Star, Clock, Gift, Heart, Zap, Shield, Sword } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Pokeball } from "@/components/PokemonIcons";
+import { Pokeball, PokemonCalendar } from "@/components/PokemonIcons";
 import { cn } from "@/lib/utils";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
@@ -193,7 +193,7 @@ export default function PokemonDaily() {
     if (streak >= 14) return { icon: Star, text: "Master Trainer!", color: "text-yellow-500" };
     if (streak >= 7) return { icon: Zap, text: "Dedicated Trainer!", color: "text-blue-500" };
     if (streak >= 3) return { icon: Heart, text: "Committed Trainer!", color: "text-green-500" };
-    return { icon: Calendar, text: "New Trainer!", color: "text-muted-foreground" };
+    return { icon: PokemonCalendar, text: "New Trainer!", color: "text-muted-foreground" };
   };
 
   if (loading) {
@@ -216,7 +216,7 @@ export default function PokemonDaily() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="p-8 text-center">
-          <Calendar className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+          <PokemonCalendar className="h-12 w-12 mx-auto mb-4" />
           <h2 className="text-xl font-semibold mb-2">Unable to Load Daily Pokémon</h2>
           <Button onClick={loadDailyPokemon}>Try Again</Button>
         </Card>
@@ -240,7 +240,7 @@ export default function PokemonDaily() {
           </Button>
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <Calendar className="h-7 w-7 text-primary-foreground" />
+              <PokemonCalendar className="h-7 w-7" />
             </div>
             <div>
               <h1 className="text-3xl font-bold">Pokémon of the Day</h1>
