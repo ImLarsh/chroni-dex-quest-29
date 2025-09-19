@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
   ArrowLeft, Plus, Trash2, Star, Search, Trophy, 
-  Calendar, MapPin, Clock, Target, RotateCcw 
+  Calendar, MapPin, Clock, Target, RotateCcw, Shuffle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Pokeball } from "@/components/PokemonIcons";

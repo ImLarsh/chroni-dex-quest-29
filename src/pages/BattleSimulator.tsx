@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
 import { 
   ArrowLeft, Sword, Shield, Zap, Heart, Search, 
-  RotateCcw, Play, Trophy, AlertCircle 
+  RotateCcw, Play, Trophy, AlertCircle, Gamepad
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Pokeball } from "@/components/PokemonIcons";
@@ -219,7 +219,7 @@ export default function BattleSimulator() {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Gamepad2 className="h-6 w-6 text-primary-foreground" />
+              <Gamepad className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
               <h1 className="text-3xl font-bold">Battle Simulator</h1>

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { 
   ArrowLeft, ChevronLeft, ChevronRight, Search, 
-  Gamepad2, MapPin, Users, Zap 
+  Gamepad, MapPin, Users, Zap, Calendar
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Pokeball } from "@/components/PokemonIcons";
@@ -323,7 +323,7 @@ export default function GenerationTimeline() {
               {/* Games & Features */}
               <Card className="p-6">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
-                  <Gamepad2 className="h-5 w-5" />
+                  <Gamepad className="h-5 w-5" />
                   Games & Features
                 </h3>
                 

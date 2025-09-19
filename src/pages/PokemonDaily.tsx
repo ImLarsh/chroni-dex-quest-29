@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, Star, Clock, Gift, Heart, Zap, Shield, Sword } from "lucide-react";
+import { ArrowLeft, Star, Clock, Gift, Heart, Zap, Shield, Sword, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Pokeball } from "@/components/PokemonIcons";
 import { cn } from "@/lib/utils";

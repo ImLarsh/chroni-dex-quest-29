@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
   ArrowLeft, Play, Pause, Volume2, VolumeX, Search, 
-  SkipBack, SkipForward, Shuffle, RotateCcw 
+  SkipBack, SkipForward, Shuffle, RotateCcw, Music
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Pokeball } from "@/components/PokemonIcons";
