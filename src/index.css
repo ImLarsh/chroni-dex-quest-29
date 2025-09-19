@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hand-Crafted Pokédex Design System - Organic & Creative */
+
+@layer base {
+  :root {
+    /* Warm, Organic Color Palette - Light Theme */
+    --background: 42 23% 97%;
+    --foreground: 210 8% 14%;
+
+    --card: 35 18% 96%;
+    --card-foreground: 210 8% 14%;
+
+    --popover: 35 18% 96%;
+    --popover-foreground: 210 8% 14%;
+
+    /* Primary - Organic Red with warmth */
+    --primary: 8 75% 55%;
+    --primary-glow: 12 88% 65%;
+    --primary-foreground: 42 15% 98%;
+
+    /* Secondary - Soft Blue-gray */
+    --secondary: 210 18% 87%;
+    --secondary-foreground: 210 15% 25%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 280 25% 85%;
+    --accent-foreground: 280 35% 20%;
+
+    --destructive: 5 80% 58%;
+    --destructive-foreground: 42 15% 98%;
+
+    --border: 210 12% 85%;
+    --input: 210 12% 90%;
+    --ring: 8 75% 55%;
+
+    --radius: 12px;
+
+    /* Hand-Crafted Shadows with personality */
+    --shadow-organic: 0 2px 8px -1px rgb(0 0 0 / 0.12), 0 1px 3px -1px rgb(0 0 0 / 0.08);
+    --shadow-playful: 0 4px 12px -2px rgb(0 0 0 / 0.15), 0 2px 6px -3px rgb(0 0 0 / 0.1);
+    --shadow-creative: 0 8px 25px -8px rgb(0 0 0 / 0.18), 0 3px 10px -4px rgb(0 0 0 / 0.12);
+    --shadow-bold: 0 12px 30px -10px rgb(0 0 0 / 0.22), 0 5px 15px -6px rgb(0 0 0 / 0.15);
+
+    /* Creative Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-sunset: linear-gradient(120deg, #ff6b6b 0%, #ffd93d 50%, #6bcf7f 100%);
+    --gradient-ocean: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    --gradient-nature: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    
+    /* Textures & Patterns */
+    --texture-paper: radial-gradient(circle at 25% 25%, #ffffff 0%, #fafafa 50%, #f5f5f5 100%);
+    --texture-grain: 
+      radial-gradient(circle at 20% 50%, transparent 20%, rgba(255,255,255,0.3) 21%, rgba(255,255,255,0.3) 34%, transparent 35%, transparent),
+      linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.05) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05) 76%, transparent 77%, transparent);
+
+    /* Sidebar Variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Moody Dark Theme with Character */
+    --background: 260 8% 8%;
+    --foreground: 42 18% 95%;
+
+    --card: 260 12% 12%;
+    --card-foreground: 42 18% 95%;
+
+    --popover: 260 12% 12%;
+    --popover-foreground: 42 18% 95%;
+
+    --primary: 8 75% 55%;
+    --primary-glow: 25 85% 60%;
+    --primary-foreground: 42 18% 95%;
+
+    --secondary: 260 15% 18%;
+    --secondary-foreground: 42 18% 92%;
+
+    --muted: 260 12% 15%;
+    --muted-foreground: 260 8% 65%;
+
+    --accent: 280 25% 25%;
+    --accent-foreground: 280 15% 90%;
+
+    --destructive: 5 75% 55%;
+    --destructive-foreground: 42 18% 95%;
+
+    --border: 260 10% 20%;
+    --input: 260 12% 18%;
+    --ring: 25 85% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: var(--texture-paper);
+  }
+
+  /* Hand-drawn feel */
+  .organic-border {
+    border-radius: 8px 12px 10px 14px;
+  }
+  
+  .creative-shadow {
+    box-shadow: var(--shadow-creative);
+  }
+  
+  .playful-shadow {
+    box-shadow: var(--shadow-playful);
+  }
+  
+  .organic-hover {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-border/80;
+  }
+
+  /* Focus Ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  /* Playful Pokemon Animations */
+  .pokemon-3d-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .pokemon-3d-image {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-style: preserve-3d;
+    animation: pokemon-bounce 4s ease-in-out infinite;
+  }
+
+  .pokemon-3d-container:hover .pokemon-3d-image {
+    animation: pokemon-wiggle 1.5s ease-in-out infinite;
+  }
+
+  /* Organic card animations */
+  .card-organic {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center bottom;
+  }
+  
+  .card-organic:hover {
+    transform: translateY(-8px) rotate(-1deg) scale(1.02);
+  }
+
+  .card-organic:nth-child(even):hover {
+    transform: translateY(-8px) rotate(1deg) scale(1.02);
+  }
+
+  @keyframes pokemon-bounce {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-5px) rotate(-1deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-3px) rotate(1deg);
+    }
+  }
+
+  @keyframes pokemon-wiggle {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(-3deg) scale(1.05);
+    }
+    50% {
+      transform: rotate(0deg) scale(1.08);
+    }
+    75% {
+      transform: rotate(3deg) scale(1.05);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  /* Organic text styles */
+  .handwritten-feel {
+    font-variation-settings: 'wght' 450;
+    letter-spacing: 0.02em;
+  }
+
+  .creative-title {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
